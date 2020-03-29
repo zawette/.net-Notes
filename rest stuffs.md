@@ -1,7 +1,7 @@
 # REST
 ## REST constraints
 + Client-Server: client and server are separated ( they can evolve separately)
-+ Statelessness: state is contained within the request ( when a client requests a ressource, that request contains all the necessary information (this means that a combination of uri,header,method , body is sufficient for the api to fully  the request ))
++ Statelessness: state is contained within the request ( when a client requests a ressource, that request contains all the necessary information (this means that a combination of uri,header,method , body is sufficient for the api to fully understand the request ))
 + Cacheable: each response must explicitly state wether it can be cached or not (if you check the response headers of a rest api get call for example , you'll find some cache related headers like cache-Control , Expires,last modified )
 + Layered system: allows you to use a layered system architecture where you deploy the APIs on server A, and store data on server B and authenticate requests in Server C , and a client cannot tell what layer its connected to
 ## Best Practises
@@ -23,3 +23,20 @@
     + level 406 - Not acceptable ( consumer makes a request in a format that isn't supported by the api (for example in xml format while the api only supports json))
 + level 5xx these are server mistakes
     + 500 - internal server error
+## http methods
++ get for getting the ressource
++ post for creating a new ressource
++ put for updating a ressource
++ patch for partialy updating a ressource
++ head is identical to get , the only difference is that it shouldn't return a response body
+
+## Method safety and idempotency
+|HTTP Method|Idempotent|Safe|
+|------------|----------|------|
+|GET|yes|yes|
+|OPTIONS|yes|yes|
+|HEAD|yes|yes|
+|POST|no|no|
+|PUT|yes|no|
+|DELETE|yes|no|
+|PATCH|no|no|
