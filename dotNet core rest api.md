@@ -71,3 +71,8 @@ src: https://app.pluralsight.com/player?course=asp-dot-net-core-3-restful-api-bu
 custom validation for a dto is possible by either by :
 + extending the IValidatableObject interface and implementing the Validate method 
 + class level input validation with a custom attribute (class that extends ValidationAttribute and implements IsValid)
+
+## DI IOC
++ By calling services.AddSingleton will create the service the first time you request it and then every subsequent request is calling the same instance of the service. This means that all components are sharing the same service every time they need it. You are using the same instance always
++ By calling services.AddScoped will create the service once per request. That means whenever we send the HTTP request towards the application, a new instance of the service is created
++ By calling services.AddTransient will create the service each time the application request it. This means that if during one request towards our application, multiple components need the service, this service will be created again for every single component which needs it
