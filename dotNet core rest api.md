@@ -76,3 +76,29 @@ custom validation for a dto is possible by either by :
 + By calling services.AddSingleton will create the service the first time you request it and then every subsequent request is calling the same instance of the service. This means that all components are sharing the same service every time they need it. You are using the same instance always
 + By calling services.AddScoped will create the service once per request. That means whenever we send the HTTP request towards the application, a new instance of the service is created
 + By calling services.AddTransient will create the service each time the application request it. This means that if during one request towards our application, multiple components need the service, this service will be created again for every single component which needs it
+
+## adding headers
+``` c# 
+    [HttpGet]
+    public IActionResult GetAllOwners([FromQuery] OwnerParameters ownerParameters)
+    {
+        var owners = _repository.Owner.GetOwners(ownerParameters);
+        var metadata = new
+                        {
+                            owners.TotalCount,
+                            owners.PageSize,
+                            owners.CurrentPage,
+                            owners.TotalPages,
+                            owners.HasNext,
+                            owners.HasPrevious
+                        };
+                        
+        //custom header X-Pagination
+        Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+        return Ok(owners);
+
+    }
+```
+
+## good stuffs
+https://www.c-sharpcorner.com/article/routing-in-restful-apis-using-net-core/   ctrl+f Patterns
