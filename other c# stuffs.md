@@ -11,3 +11,6 @@ person.print= (Action) (()=>{
     }
 })
 ```
+## creating custom Dynamic class 
+by extending DynamicObject( a class that extends IDynamicMetaObjectProvider,enables you to define for example what happens when you try to get or set an object property, call a method or perform mathematical operation such as addition and multiplication)
+ 
