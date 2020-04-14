@@ -6,4 +6,4 @@
 + [dotNet core rest api](dotNet_core_rest_api.md)
 + [asp.net_mvc_5](asp.net_mvc_5.md)
 + [c# Reflection and System.dynamic](other_cSharp_stuffs.md)
-+ [DDD_N_Projet](DDD_N_Projet.md)
++ [DDD AND Exercice](DDD_N_Projet.md)
