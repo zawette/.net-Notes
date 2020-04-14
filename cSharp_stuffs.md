@@ -39,9 +39,6 @@ public static IEnumerable<T> where(this IEnumerable<T> source, Func<T,bool>) pre
 
 # IEnumerable vs IQueryable and  Expression<Func<T, bool>> vs Func<T, bool>
 
-
-I'm adding an answer-for-noobs because these answers seemed over my head, until I realized how simple it is. Sometimes it's your expectation that it's complicated that makes you unable to 'wrap your head around it'.
-
 I didn't need to understand the difference until I walked into a really annoying 'bug' trying to use LINQ-to-SQL generically:
 
 public IEnumerable<T> Get(Func<T, bool> conditionLambda){
