@@ -9,6 +9,7 @@ modelBuilder.Entity<Player>().OwnsOne(p=> p.NameFactory)
 
 ```
 # SchoolClassReservation
+link to the repo :[SchoolClassReservation](https://github.com/zawette/SchoolClassReservation)
 ## notes
 + the API project depends on the "Application" and "Persistance" layers
 + the Application layer contains interfaces, Dtos , command/queries , exceptions and all application logic , it only depends on the domain layer
