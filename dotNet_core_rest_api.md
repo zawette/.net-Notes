@@ -69,7 +69,7 @@ src: https://app.pluralsight.com/player?course=asp-dot-net-core-3-restful-api-bu
 
 ## custom validation 
 custom validation for a dto is possible by either by :
-+ extending the IValidatableObject interface and implementing the Validate method 
++ extending the IValidatableObject interface and implementing the Validate method on the dto
 + class level input validation with a custom attribute (class that extends ValidationAttribute and implements IsValid)
 
 ## DI IOC
