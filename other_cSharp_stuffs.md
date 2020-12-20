@@ -117,6 +117,15 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
         Rainbow.Violet => new RGBColor(0x94, 0x00, 0xD3),
         _              => throw new ArgumentException(message: "invalid enum value", paramName: nameof(colorBand)),
     };
+
+public string getExceptionString(Exception exception)
+            => exception switch
+            {
+                DomainException ex => = ex.Message,
+                ApplicationException ex =>  ex.Message,
+                _ => "error"
+            };
+
 ```
 
 ## Property patterns
