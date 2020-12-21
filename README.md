@@ -1,6 +1,8 @@
 # ALL Notes
 
 + ## [C#](cSharp_stuffs.md)
++ ## [moar C#](other_cSharp_stuffs.md)
++ ## [linq](linq.md)
 + ## [entity Framework](entity_Framework.md)
 + ## [rest stuffs](rest_stuffs.md)
 + ## [dotNet core rest api](dotNet_core_rest_api.md)
