@@ -57,3 +57,15 @@
 
     }
   ```
+- ## async
+  - according to [msdn](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async) : An async method runs synchronously until it reaches its first await expression, at which point the method is suspended until the awaited task is complete. In the meantime, control returns to the caller of the method.
+
+    ```c#
+    // code before and after the await keyword is executed on the calling thread
+        public async Task testmethod() {
+          Thread.sleep(5000000);
+          await somethingAsync(); // this is the only asynchronous portion of this code
+          Thread.sleep(5000000);
+         }
+  ```
+- js's apromise.then() equivalent in c# is aTask.ContinueWith(), but just like in js, async and await is moslty more readable and maintainable approach
