@@ -1,5 +1,8 @@
 # C# stuffs
 
+- ## structs
+  - Structs are value types, when you create a struct object using the new operator, it gets created and the appropriate constructor is called. Unlike classes, structs can be instantiated without using the new operator. If you do not use new, the fields will remain unassigned and the object cannot be used until all of the fields are initialized. [msdn](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct)
+
 - ## strings
   - Strings in C sharp are reference type that acts like a value type
   ```c#
