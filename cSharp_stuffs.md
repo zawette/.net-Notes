@@ -71,4 +71,13 @@
           Thread.sleep(5000000);
          }
   ```
-- js's apromise.then() equivalent in c# is aTask.ContinueWith(), but just like in js, async and await is moslty more readable and maintainable approach
+  - js's apromise.then() equivalent in c# is aTask.ContinueWith(), but just like in js, async and await is moslty more readable and maintainable approach
+
+- ## Singleton VS Static Classes
+| Singleton                    | Static Class                         |
+|------------------------------|--------------------------------------|
+| Can implement interfaces     | Can't                                |
+| can be passed as an argument | can't since you can't instantiate it |
+| can be assigned to variables | can't for the same above reason      |
+| Supports polymorphism        | doesn't for the same above reason    |
+| can have state               | can only access global state         |
